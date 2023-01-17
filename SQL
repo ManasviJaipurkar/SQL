@@ -1,0 +1,68 @@
+#Create table
+
+
+CREATE TABLE matches (id integer,
+  season integer,
+  city varchar,
+  date date,
+  team1 varchar, 
+  team2 varchar, 
+  toss_winner varchar, 
+  toss_decision varchar, 
+  result varchar, 
+  dl_applied integer, 
+  winner varchar, 
+  win_by_runs integer, 
+  win_by_wickets integer, 
+  player_of_the_match varchar, 
+  venue varchar, 
+  umpire1 varchar, 
+  umpire2 varchar, 
+  umpire3 integer
+);
+
+CREATE TABLE deliveries (
+  matchid integer, 
+  inning integer, 
+  batting_team varchar, 
+  bowling_team varchar, 
+  over integer, 
+  ball integer, 
+  batsman varchar, 
+  non_striker varchar, 
+  bowler varchar, 
+  is_super_over integer, 
+  wide_runs integer, 
+  bye_runs integer, 
+  legbye_runs integer, 
+  noball_runs integer, 
+  penalty_runs integer, 
+  batsman_runs integer, 
+  extra_runs integer, 
+  total_runs integer, 
+  player_dismissed varchar, 
+  dismissal_kind varchar, 
+  fielder varchar
+);
+
+
+Select count(distinct city)from matches;
+
+
+Select count(distinct  venu)from matches;
+
+
+Select  *from matches where result=’tie’ order by date desc;
+
+
+Select *from matches where result_marginr > 100;
+
+Select *from matches where date=’2013-05-02’;
+
+Select *from matches limit 20;
+
+Select *from deliveries_v02 limit 20;
+
+Select * from deliveries_vo2;
+
+Select *from matches;
